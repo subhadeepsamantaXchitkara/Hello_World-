@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="bro.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Happy Birthday!</h1>
+        </div>
+        <div class="image-container">
+            <img src="WhatsApp Image 2024-11-04 at 13.55.27_8f3fbd08.jpg" alt="Birthday Celebration" border="0">
+        </div>
+        
+        <div class="additional-images">
+            <img id="me1" src="c5c3a578-3116-4946-8196-01f098ab4ee7.jpg" alt="Image 1" class="additional-image">
+            <img id="me2" src="Scott Mccall and Stiles Stilinki _You're my brother_.jpeg" alt="Image 2" class="additional-image">
+        </div>
+        
+        <!-- Audio element without controls -->
+        <audio id="birthday-song" src="Yeh_Dosti_Hum_Nahi_Todenge__Lyrics_by-_Arijit_Singh__heart❤_touching_songs(128k).mp3"></audio>
+
+        <div class="content">
+            <button id="play-button" class="play-button">Click Me!</button>
+            <p>
+                <b>🎉 Happy Birthday, Sagar! 🎉
+
+                    Wishing you a fantastic year ahead filled with joy, laughter, and all the things that bring you happiness! 🎂🥳 You’ve always been such an amazing friend, and I'm grateful for all the good times we've shared. May this special day be filled with unforgettable moments and may every day of this year bring you closer to your dreams. Keep shining, and never stop being the incredible person you are!
+                    
+                    Cheers to more adventures together! 🥂✨</b>
+                <br><br>
+                <b>With love and best wishes,<br>
+                Subhadeep😊</b>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>The</p>
+            <p>...BakBencher-1👨🏻‍💻...</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            const button = this;
+            const song = document.getElementById('birthday-song');
+
+            // Change button text immediately
+            button.textContent = "Wait a few seconds !";
+
+            // Play or pause the song
+            if (song.paused) {
+                song.play().then(() => {
+                    console.log("Audio is playing.");
+                }).catch(error => {
+                    console.error("Error playing audio:", error);
+                });
+            } else {
+                song.pause();
+                console.log("Audio paused.");
+            }
+
+            // Change back to "Click Me!" after 5 seconds
+           // 5000 milliseconds = 5 seconds
+        });
+    </script>
+</body>
+</html>
+
